@@ -30,12 +30,20 @@ namespace ASP_MVC_Practice.Controllers
         // Page index is the page that will be displayed i.e page 1 of 20
         public ActionResult Index(int? pageIndex, string sortBy)
         {
+            // if pageIndex is null we will just show the first page of results
             if (!pageIndex.HasValue)
                 pageIndex = 1;
+            // Used to sort the results by name
             if (String.IsNullOrWhiteSpace(sortBy))
                 sortBy = "Name";
 
             return Content(String.Format("pageindex={0}&sortBy = {1}", pageIndex, sortBy));
+        }
+
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            // returns movies within a specific month and year 
+            return Content(year + "/" + month);
         }
     }
 }
