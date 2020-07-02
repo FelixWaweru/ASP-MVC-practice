@@ -40,6 +40,11 @@ namespace ASP_MVC_Practice.Controllers
             return Content(String.Format("pageindex={0}&sortBy = {1}", pageIndex, sortBy));
         }
 
+        // Attribute routing used to create dynamic attributes
+        // The regex is a regular expression
+        // Range is a constraint used to set conditions
+        [Route("movies/released/{year}/{month:regex(\\d{2}):range(1, 12)}")]
+
         public ActionResult ByReleaseDate(int year, int month)
         {
             // returns movies within a specific month and year 
