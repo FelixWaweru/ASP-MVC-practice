@@ -23,7 +23,7 @@ namespace ASP_MVC_Practice
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-darkly.css",
+                      "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }
     }

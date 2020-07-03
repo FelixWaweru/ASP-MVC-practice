@@ -7,5 +7,7 @@ namespace ASP_MVC_Practice.Models
 {
     public class Customer
     {
+        public int Id { get; set; }
+        public string Name { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using ASP_MVC_Practice.Models;
+using ASP_MVC_Practice.ViewModels;
 
 namespace ASP_MVC_Practice.Controllers
 {
@@ -16,7 +17,19 @@ namespace ASP_MVC_Practice.Controllers
         {
             // For the sake of this project we will use inline data values and not a db
             var movie = new Movie() { Name = "Cobra Squad"};
-            return View(movie);
+            var customers = new List<Customer>
+            {
+                new Customer { Name = "Customer 1"},
+                new Customer { Name = "Customer 2"}
+            };
+            var viewModel = new RandomMovieViewModel
+            {
+                Movie = movie,
+                Customers = customers
+            };
+                
+
+            return View(viewModel);
         }
 
         // The int id is used by the RouteConfig to assign an id to the action
