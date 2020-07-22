@@ -12,7 +12,7 @@ namespace ASP_MVC_practice.Models
 {
     public static class DapperORM
     {
-        private static string connectionString = @"Data Source=(local)\sqle2012;Initial Catalog=DapperDB;Integrated Security=True;";
+        private static string connectionString = @"Data Source=DESKTOP-R97I09I;Initial Catalog=DapperDB;Integrated Security=True;";
 
 
         public static void ExecuteWithoutReturn(string procedureName, DynamicParameters param = null)
